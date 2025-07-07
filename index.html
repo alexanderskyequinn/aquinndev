@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alexander's Homepage</title>
+    <link rel="stylesheet" href="/styles/98.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="icon" type="image/x-icon" href="/assets/win95.png">
+    <meta property="og:title" content="Quinn's Bio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alexanderquinn.dev/" />
+    <meta property="og:image" content="/assets/win95.png" />
+    <meta property="og:description" content="Alexander's bio page" />
+    <meta name="theme-color" content="#00807F">
+    <meta name="og:card" content="/assets/98clouds.jpg">
+</head>
+
+
+    <body>
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">Alexanders Home Page</div>
+                <div class="title-bar-controls">
+                </div>
+            </div>
+
+            <div class="window-body">
+                <menu role="tablist">
+                    <li role="tab" aria-selected="true" id="homePage">Homepage</li>
+                    <li role="tab" id="myComputer">Device Manager</li>
+                    <li role="tab" id="myPortfolio">My Portfolio</li>
+                    <li role="tab" id="contactMe">Contact Me</li>
+                </menu>
+            </div>
+
+        <div id="content-homePage" class="window" role="tabpanel">
+            <div class="window-body">
+                <p>Hi! My name is Alex or null, but mostly everyone calls me Quinn!</p>
+                <p style="color: blue;">My pronouns are They // She // It!</p>
+                <p>I do all sorts of stuff, but to be more specific I am knowledgeable in HTML, CSS, JS, and a couple other languages! </p>
+                <p>Some of my projects can be found on my <a href="https://github.com/alexanderskyequinn"> GitHub</a>! The rest including my demo reels can be found on <a href="#" onclick="switchToTab('myPortfolio'); return false;">my portfolio</a>.</p>
+                <p>I am interested in cinematography, photography, and really anything to do with a camera!</p>
+                <p>Currently, I am enrolled in college for my Bachelors of Science in Multimedia & Film Production!</p>
+                <p>I work as a barista part time and also as a student production assistant in a D1 college athletics program!</p>
+                <p>Generally I am busy from 7 AM EST to around 5 PM EST, so I may be slower to do anything between those times!</p>
+            </div>
+            <div class="window-body">
+                <button id="openButton">Open Notepad</button>
+                <button><a href="https://www.amazon.com/hz/wishlist/ls/1PU4HGB993PG?ref_=wl_share" style="color: black; text-decoration: none;">My Wishlist</a></button>
+                <p style="color:gray;">You can drag the notepad window! The notepad was more of a test than anything, but it does save anything typed in it to the cache in your browser! It works surprisingly well for using minimal JS and CSS!</p>
+            </div>
+            <div class="status-bar">
+                <p id="browserua" class="status-bar-field"></p>
+                <p id="date" class="status-bar-field"></p>
+                <p class="status-bar-field"><a href="https://jdan.github.io/98.css/" target="_blank" style="color: blue; text-decoration: underline;">Inspiration and CSS</a></p>
+            </div>
+        </div>
+
+            <div id="content-myComputer" class="window" role="tabpanel" style="display: none;">
+                <div class="window-body">
+                    <p>Here is a list of all of my devices and their specs! This table is more for my reference, but you can see it too!</p>
+                    <ul class="tree-view">
+                        <li></li>
+                        <li>THE-MONOLITH</li>
+                        <details closed>
+                            <summary>Case</summary>
+                            <ul>
+                            <li><a href="https://www.bequiet.com/en/case/2047" target="_blank" style="color: blue; text-decoration: underline;"> beQuiet! Silent Base 802</a></li>
+                            </ul>
+                        </details>
+                        <details closed>
+                            <summary>Motherboard</summary>
+                            <ul>
+                            <li><a href="https://www.gigabyte.com/Motherboard/B550-VISION-D-P-rev-1x" target="_blank" style="color: blue; text-decoration: underline;">Gigabyte Vision D-P B550</a></li>
+                            </ul>
+                        </details>
+                        <details closed>
+                            <summary>CPU</summary>
+                            <ul>
+                                <li><a href="https://www.amd.com/en/products/processors/desktops/ryzen/5000-series/amd-ryzen-5-5600x.html" target="_blank" style="color: blue; text-decoration: underline;"> AMD Ryzen 5 5600x @ 4.8 GHz</a></li>
+                            </ul>
+                        </details>
+                        <details closed>
+                            <summary>RAM</summary>
+                            <ul>
+                                <li><a href="https://www.teamgroupinc.com/en/product-detail/memory/T-FORCE/delta-rgb-ddr4-white/delta-rgb-ddr4-white-TF4D432G4000HC18LDC01/" target="_blank" style="color: blue; text-decoration: underline;"> TEAMGROUP T-FORCE 64GB (4x16GB) 3600MT/s CL18</a></li>
+                            </ul>
+                        </details>
+                        <details closed>
+                            <summary>GPU</summary>
+                            <ul>
+                                <li><a href="https://www.sapphiretech.com/en/consumer/nitro-radeon-rx-7900-xtx-vaporx-24g-gddr6" target="_blank" style="color: blue; text-decoration: underline;"> Sapphire Nitro+ VaporX 7900XTX</a></li>
+                            </ul>
+                        </details>
+                        <details closed>
+                            <summary>Drives</summary>
+                            <details closed>
+                                <summary>NVME SSD</summary>
+                                <ul>
+                                    <li><a href="https://sabrent.com/products/sb-rocket-nvme4-1tb" target="_blank" style="color: blue; text-decoration: underline;"> Sabrent Rocket NVMe Gen4 1Tb</a></li>
+                                    <li><a href="https://sp-siliconpower.com/products/silicon-power-ud90-1tb-2tb-pcie-nvme-gen4x4-m-2-2280-internal-solid-state-drive-retail-package" target="_blank" style="color: blue; text-decoration: underline;"> Silicon Power UD90 Gen4 500GB</a></li>
+                                </ul>
+                            </details>
+                            <details closed>
+                                <summary>HDD</summary>
+                                <ul>
+                                    <li><a href="https://www.westerndigital.com/products/internal-drives/wd-red-plus-sata-3-5-hdd" target="_blank" style="color: blue; text-decoration: underline;"> Western Digital Red NAS 8TB</a></li>
+                                    <li><a href="https://www.seagate.com/products/hard-drives/barracuda-hard-drive/" target="_blank" style="color: blue; text-decoration: underline;"> Seagate Barracuda Compute 4TB</a></li>
+                                    <li><a href="https://www.seagate.com/products/nas-drives/ironwolf-hard-drive/" target="_blank" style="color: blue; text-decoration: underline;"> Seagate Iron Wolf Pro NAS 4TB</a></li>
+                                </ul>
+                            </details>
+                        </details>
+                        <details closed>
+                            <summary>VR</summary>
+                            <ul>
+                                <li><a href="https://www.vive.com/us/accessory/base-station/" target="_blank" style="color: blue; text-decoration: underline;"> 2x HTC Base Station 1.0</a></li>
+                                <li><a href="https://www.vive.com/eu/product/vive" target="_blank" style="color: blue; text-decoration: underline;"> HTC Vive 1.0</a></li>
+                                <li><a href="https://www.vive.com/us/accessory/controller/" target="_blank" style="color: blue; text-decoration: underline;"> HTC Vive 1.0 Wands</a></li>
+                            </ul>
+                        </details>
+                        <details closed>
+                            <summary>Monitors</summary>
+                            <ul>
+                                <li><a href="https://www.lg.com/us/monitors/lg-32gn650-b-gaming-monitor" target="_blank" style="color: blue; text-decoration: underline;"> LG 32" Ultragear QHD 165Hz HDR10 Monitor</a></li>
+                                <li><a href="https://www.samsung.com/ca/monitors/curved/curved-monitor-27-inch-lc27f396fhnxza/" target="_blank" style="color: blue; text-decoration: underline;"> Samsung 27" Curved Essential Monitor</a></li>
+                                <li><a href="https://www.viewsonic.com/global/products/lcd/VX2757-mhd" target="_blank" style="color: blue; text-decoration: underline;"> Viewsonic 27" VX2757-MHD Gaming Monitor</a></li>
+                            </ul>
+                        </details>
+                        <li><a href="https://www.dell.com/support/home/en-us/product-support/product/poweredge-t410/" target="_blank" style="color: blue; text-decoration: underline;"> Dell Poweredge T410</a></li>
+                        <details closed>
+                            <summary>CPU</summary>
+                            <ul>
+                                <li><a href="https://www.intel.com/content/www/us/en/products/sku/52577/intel-xeon-processor-x5675-12m-cache-3-06-ghz-6-40-gts-intel-qpi/specifications.html" target="_blank" style="color: blue; text-decoration: underline;"> 2x Intel Xeon X5675</a></li>
+                            </ul>
+                        </details>
+                        <details closed>
+                            <summary>RAM</summary>
+                            <ul>
+                                <li><a href="https://www.amazon.com/Samsung-PC3-12800-1600MHz-Registered-M393B2G70DB0-CK0/dp/B014Q1O16C" target="_blank" style="color: blue; text-decoration: underline;"> 8x Samsung 16GB DDR3 PC3-12800 1600MHz ECC Registered Server Memory </a></li>
+                            </ul>
+                        </details>
+
+                        <li>Mobile Devices</li>
+                        <details closed>
+                            <summary>Laptop</summary>
+                            <ul>
+                                <li><a href="https://support.apple.com/en-us/121552" target="_blank" style="color: blue; text-decoration: underline;"> MacBook Pro 16,8 (2024 M4 Pro 14 core)</a></li>
+                                <li><a href="https://www.seagate.com/products/gaming-drives/pc-gaming/firecuda-gaming-external-hard-drives/?sku=STKL2000400" target="_blank" style="color: blue; text-decoration: underline;"> Seagate Firecuda Gaming 2TB External Hard Drive</a></li>
+                            </ul>
+                        </details>
+                        <details closed>
+                            <summary>Phone(s)</summary>
+                            <ul>
+                                <li><a href="https://www.apple.com/by/iphone-12/specs/" target="_blank" style="color: blue; text-decoration: underline;"> iPhone 12</a></li>
+                                <li><a href="https://www.samsung.com/us/smartphones/galaxy-s23-ultra/" target="_blank" style="color: blue; text-decoration: underline;"> Samsung Galaxy S23 Ultra</a></li>
+                                <li><a href="https://www.oneplus.com/us/7pro#/" target="_blank" style="color: blue; text-decoration: underline;"> OnePlus 7 Pro</a></li>
+                            </ul>
+                        </details>
+                        <li>Camera Equipment</li>
+                        <details closed>
+                            <summary>Camera Bodies</summary>
+                            <ul>
+                                <li><a href="https://www.nikonusa.com/p/d3100/25472/overview" target="_blank" style="color: blue; text-decoration: underline;"> Nikon D3100</a></li>
+                            </ul>
+                        </details>
+                        <details closed>
+                            <summary>Lenses</summary>
+                            <ul>
+                                <li><a href="https://www.nikonusa.com/p/af-p-dx-nikkor-18-55mm-f35-56g-vr/20059" target="_blank" style="color: blue; text-decoration: underline;"> Nikon 18-55mm f/3.5-5.6G AF-P DX Nikkor Lens</a></li>
+                            </ul>
+                        </details>
+                </div>
+            </div>
+
+            <div id="content-contactMe" class="window" role="tabpanel" style="display: none;">
+                <div class="window-body">
+
+                    <p>This is my contact page! If you need to contact me, my email is linked below!</p>
+                    <p>My responses may be slow and limited. Generally I am busy from 7 AM EST to around 5 PM EST</p>
+
+                    <SCRIPT TYPE="text/javascript">
+                        emailE = 'alexanderquinn.dev'
+                        emailE = ('aquinn' + '@' + emailE)
+                        document.write('<A href="mailto:' + emailE + '">' + emailE + '</a>')
+                    </script>
+                    <NOSCRIPT> Email address protected by JavaScript </NOSCRIPT>
+
+                    <p>Or you can send me a message on Discord! @null_quinn</p>
+
+                    <p>You can also find buttons that will link to all of my pertinent accounts, below!</p>
+                    <p style="font-size: 8; color: gray;">(i dont use a whole lot of social media lol)</p>
+
+                    <button><a href="https://github.com/alexanderskyequinn" style="color: black; text-decoration: none;">GitHub</a></button>
+                    <button><a href="https://steamcommunity.com/id/null_quinn/" style="color: black; text-decoration: none;">Steam</a></button>
+                    <button><a href="https://www.last.fm/user/null_quinn" style="color: black; text-decoration: none;">LastFM</a></button>
+                    <button><a href="https://discordapp.com/users/265726062330118144"style="color: black; text-decoration: none;">Discord</a></button>
+                    </div>
+            </div>
+
+        </div>
+
+        <div id="draggableWindow" class="window" style="width: 300px; position: absolute; z-index: 9999; display: none;">
+            <div class="title-bar draggable">
+                <div class="title-bar-text">Notepad</div>
+                <div class="title-bar-controls">
+                    <button id="closeButton" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+        <div class="format-toolbar">
+            <div class="field-row">
+                <label for="fontFamily">Font:</label>
+                <select id="fontFamily">
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Impact">Impact</option>
+                </select>
+            </div>
+            <div class="field-row">
+                <label for="fontSize">Size:</label>
+                <select id="fontSize">
+                    <option value="10">10</option>
+                    <option value="12" selected>12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="24">24</option>
+                </select>
+            </div>
+            <div class="field-row">
+                <label for="textColor">Color:</label>
+                <input type="color" id="textColor" value="#000000">
+            </div>
+            <div class="format-buttons field-row">
+                <button id="boldButton" class="format-button" title="Bold">B</button>
+                <button id="italicButton" class="format-button" title="Italic"><i>I</i></button>
+                <button id="underlineButton" class="format-button" title="Underline"><u>U</u></button>
+            </div>
+        </div>
+                <div class="field-row-stacked" style="width: 300px">
+                    <div id="text20" class="text-editor" contenteditable="true"></div>
+                </div>
+            </div>
+            <div class="resize-handle"></div>
+        </div>
+
+        <script src="/scripts/index.js"></script>
+
+        <noscript>
+            <div class="footer">
+                <div class="window">
+                    <div class="title-bar">
+                        <div class="title-bar-text">JavaScript is disabled</div>
+                </div>
+                <div class="window-body">
+                    <p class="noscript-message">This site is best viewed with Javascript. If you are unable to turn on Javascript, please use this <a href="/nojs.html">link</a>.</p>            </div>
+                </div>
+        </noscript>
+
+    </body>
+
+</html>
