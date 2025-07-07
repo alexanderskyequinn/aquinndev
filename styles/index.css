@@ -1,0 +1,248 @@
+body {
+    background-image: url('/assets/98clouds.jpg');
+    background-size: cover; /* This will ensure the image covers the entire background */
+    background-repeat: no-repeat; /* This will prevent the image from repeating */
+    background-attachment: fixed; /* This will make the background image fixed when scrolling */
+    background-color: #c0c0c0;
+    font-family: Arial, sans-serif;
+}
+
+iframe {
+    height: 1024px;
+    width: 768px;
+    resize: both;
+    overflow: auto;
+  }
+
+/* Style for the noscript message */
+.noscript-message {
+    text-align: center;
+    color: red;
+}
+
+/* Style for the footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Tab styling */
+[role="tab"] {
+    cursor: pointer;
+    padding: 6px 12px;
+    margin-right: 4px;
+    display: inline-block;
+    border: 1px solid #a0a0a0;
+    background-color: #c0c0c0;
+    border-bottom: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    position: relative;
+    top: 1px;
+}
+
+[role="tab"][aria-selected="true"] {
+    background-color: #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    font-weight: bold;
+}
+
+/* Tab list styling */
+[role="tablist"] {
+    display: flex;
+    padding-left: 0;
+    margin: 0;
+    border-bottom: 1px solid #a0a0a0;
+}
+
+/* Define a fixed toolbar width */
+:root {
+    --toolbar-width: 550px; /* Adjust this value as needed to fit your controls */
+}
+
+/* Formatting toolbar styling */
+.format-toolbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Prevent wrapping to new lines */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3px 5px;
+    background-color: #c0c0c0;
+    border-bottom: 1px solid #a0a0a0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+/* Make all field rows more compact */
+.format-toolbar .field-row {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-bottom: 0;
+    white-space: nowrap;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Format buttons styling - more compact */
+.format-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 3px;
+    margin-right: 3px;
+    flex-shrink: 0;
+}
+
+/* Smaller selects to fit better */
+.format-toolbar select {
+    height: 20px;
+    font-size: 12px;
+    min-width: 80px; /* Reduce minimum width */
+}
+
+/* Make buttons more compact */
+.format-button {
+    width: 24px;  /* Reduced from original width */
+    height: 20px;
+    margin-right: 1px;
+    padding: 0;
+    font-size: 11px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: unset; /* Prevent any minimum width inheritance */
+}
+
+/* More compact labels */
+.format-toolbar label {
+    margin-right: 2px;
+    font-size: 11px;
+}
+
+/* Update draggable window to fix all border issues */
+#draggableWindow {
+    min-width: var(--toolbar-width); /* Match toolbar width */
+    min-height: 150px;
+    position: absolute;
+    z-index: 9999;
+    box-sizing: border-box;
+    overflow: visible; /* Changed from hidden to show borders */
+    border: 2px solid; /* Use shorthand */
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    background-color: #c0c0c0;
+}
+
+/* Style the contenteditable div like a textarea with scrollbar */
+#draggableWindow .text-editor {
+    width: 100% !important;
+    height: 100% !important;
+    resize: none;
+    margin: 0;
+    padding: 4px;
+    border: 1px inset #808080;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    overflow-y: auto; /* Add vertical scrollbar when needed */
+    overflow-x: auto; /* Add horizontal scrollbar when needed */
+    background: white;
+    color: black;
+    font-family: Arial;
+    font-size: 12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    min-height: 50px; /* Ensure there's always a minimum height */
+}
+
+/* Reset window body styling for proper dimensions with scrolling */
+#draggableWindow .window-body {
+    width: 100% !important;
+    height: calc(100% - 30px); /* Account for title bar */
+    padding: 6px;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent children from leaking out */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Create a container for the textarea to properly fit the window */
+#draggableWindow .field-row-stacked {
+    flex: 1 1 auto; /* Grow to fill space */
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 0; /* Important for flex items to shrink below content size */
+}
+
+/* Fix toolbar to fit properly */
+.format-toolbar {
+    flex: 0 0 auto; /* Don't grow or shrink */
+    margin-bottom: 5px;
+}
+
+/* Fix textarea to properly attach to all edges */
+#draggableWindow textarea {
+    width: 100% !important;
+    height: 100% !important;
+    resize: none;
+    margin: 0;
+    padding: 2px;
+    border: 1px inset #808080;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+}
+
+/* Active state for buttons */
+.format-button.active {
+    background-color: #b0b0b0;
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
+
+/* Fix the resize handle position to not cover borders */
+.resize-handle {
+    width: 14px;
+    height: 14px;
+    background-color: #c0c0c0;
+    border: 1px solid #808080;
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    cursor: nwse-resize;
+    z-index: 10000;
+}
+
+/* Fix title bar to match window width properly */
+#draggableWindow .title-bar {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+/* Make sure the main window has proper box sizing */
+#draggableWindow {
+    min-width: var(--toolbar-width);
+    min-height: 150px;
+    position: absolute;
+    z-index: 9999;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    background-color: #c0c0c0;
+}
+
+/* Adjust controls in title bar to stay within bounds */
+#draggableWindow .title-bar-controls {
+    box-sizing: border-box;
+    padding-right: 2px;
+}

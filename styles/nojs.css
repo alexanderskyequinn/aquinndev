@@ -1,0 +1,45 @@
+        /* Basic styles for the tabs */
+        .tab-content {
+            display: none;
+        }
+
+        body {
+            background-image: url('/assets/98clouds.jpg');
+            background-size: cover; /* This will ensure the image covers the entire background */
+            background-repeat: no-repeat; /* This will prevent the image from repeating */
+            background-attachment: fixed; /* This will make the background image fixed when scrolling */
+            background-color: #c0c0c0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Show the tab content when the corresponding tab is targeted */
+        #home:target ~ .tab-content#content-homePage,
+        #dmanager:target ~ .tab-content#content-myComputer,
+        #contact:target ~ .tab-content#content-contactMe,
+        #credits:target ~ .tab-content#content-credits {
+            display: block;
+        }
+
+        /* Hide the default content when any other tab is selected */
+        :not(#home):target ~ .tab-content#content-homePage {
+            display: none;
+        }
+
+        /* Default to showing the homepage content */
+        body:not(:has(:target)) .tab-content#content-homePage {
+            display: block;
+        }
+
+        /* Style for the noscript message */
+        .noscript-message {
+            text-align: center;
+            color: red;
+        }
+
+        /* Style for the footer */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            padding: 10px;
+        }
