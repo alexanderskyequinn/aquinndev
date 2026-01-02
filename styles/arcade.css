@@ -1,0 +1,5 @@
+body {
+    background-image: url('/assets/arcadecarpet.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
