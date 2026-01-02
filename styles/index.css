@@ -29,32 +29,27 @@ iframe {
 }
 
 /* Tab styling */
-[role="tab"] {
+menu[role="tablist"] > li[role="tab"] {
     cursor: pointer;
-    padding: 6px 12px;
-    margin-right: 4px;
-    display: inline-block;
-    border: 1px solid #a0a0a0;
-    background-color: #c0c0c0;
-    border-bottom: none;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    position: relative;
-    top: 1px;
+    padding: 6px 10px;
+    line-height: 1;
+    white-space: nowrap;
+    font-weight: 400;
 }
 
-[role="tab"][aria-selected="true"] {
-    background-color: #d8d8d8;
-    border-bottom: 1px solid #d8d8d8;
-    font-weight: bold;
+/*
+  98.css sets the selected tab to z-index: 8 and nudges it upward.
+  With your layout (tab list above separate tabpanel windows), that can cause
+  the selected tab to visually sit on top of the rest of the page.
+*/
+menu[role="tablist"] > li[role="tab"][aria-selected="true"] {
+    z-index: 3;
+    font-weight: 400;
 }
 
-/* Tab list styling */
-[role="tablist"] {
-    display: flex;
-    padding-left: 0;
-    margin: 0;
-    border-bottom: 1px solid #a0a0a0;
+/* Ensure panels stay in their own layer below the selected tab. */
+.window[role="tabpanel"] {
+    z-index: 2;
 }
 
 /* Define a fixed toolbar width */
